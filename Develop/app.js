@@ -7,7 +7,7 @@ const fs = require("fs");
 const render = require("./lib/htmlRenderer");
 
 const OUTPUT_DIR = path.resolve(__dirname, "output");
-const outputPath = path.join(OUTPUT_DIR, "main.html");
+const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const teamList = []
 
@@ -16,8 +16,7 @@ const teamList = []
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
 
-// Prompt for manager
-// Create manager questions array
+// Prompt for manager; manager questions array
 
 inquirer.prompt([
     {
@@ -82,32 +81,18 @@ function addEmployee() {
                 break;
 
             case "I'm done adding employees.":
-                render(teamList);
-                // console.log(teamList);
-                break
-
+                render(teamList)
+                    fs.writeFile('./output/team.html', `teamList`, (err) => {
+                    if (err) {
+                      console.log(err)
+                      return
+                    } else {
+                        console.log("file written successfully")
+                    }
+                })
         }
     })
 }
-
-// Loop start
-//     let exit = false
-
-//     while (exit === false) {    
-//     }
-//             then(function (employeeAnswer) {
-//                 if (employeeAnswer.addEmployee === "Engineer") {
-//                     // Aquestions about engineer
-//                 } else if (employeeAnswer.addEmployee === "Intern") {
-//                     // Aquestions about intern
-//                 } else if (employeeAnswer.addEmployee === "I'm done adding employees.") {
-//                     exit = true;
-
-//                 }})
-// //                 // Ask if they would like to add any more employees
-// //                 // List: Engineer, Intern, no more employees
-// //                 // Loop end
-
 
 // if "engineer" is selected, run through this array:
 function addEngineer() {
@@ -170,30 +155,14 @@ inquirer.prompt([
     addEmployee();
 })
 };
+//Do I need this? 
+module.exports = teamList
 
-// functions working! Need to add a function for exiting and printing.abs
-// Then need to write to HTML, and output path. 
-
-
-// //                 async function init() {
-// //                     //     try {
-// //                     //         const answers = await autoReadMePrompt();
-
-// //                     //         const userData = api.getUser(answers.githubID.avatar_url);
-
-// //                     //         const doc = generateMarkdown(answers);
-
-// //                     //         await writeFileAsync("readme-demo.md", doc);
-
-// //                     //      } catch (err) {
-// //                     //         console.log(err);
-// //                     //     }
-// //                     // }
-// //                 }
-// //                 init();
-// // // After the user has input all employees desired, call the `render` function (required
-// // // above) and pass in an array containing all employee objects; the `render` function will
+// // // After the user has input all employees desired, call the `render` function required
+// // // above and pass in an array containing all employee objects; the `render` function will
 // // // generate and return a block of HTML including templated divs for each employee!
+
+// Not sure how to do this?
 
 // // // After you have your html, you're now ready to create an HTML file using the HTML
 // // // returned from the `render` function. Now write it to a file named `team.html` in the
