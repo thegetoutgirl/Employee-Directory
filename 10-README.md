@@ -27,10 +27,14 @@ Run "node app.js" on the command line. Enter employee information as prompted. W
 CC
 
 # Tests
-Standard test package is installed in the "tests" directory.
+Standard test package is installed in the "tests" directory. Provided test code had an error, so shoutout to classmates for sharing that solution!
 
 # Future Development
-I would prefer to have the standard employee questions loop through, with only one role-specific question per role, but I ran out of time to complete that. I'd like to create some sort of "tree", with managers posting to the top row, engineers in the middle, interns on the bottom row, but I couldn't quite get it there. Styling-wise, this was fun. Would like to create more responsiveness in the design, add a place for profile photo, make the card background a solid color (but still have the table be white/gray), and line up the card header so everything is in alignment. Challenges for another day! With regards to styling, it was a good exercise to update the ccorrect files with styling (after everything was working, of course!)
+Will work on a script to make the title dynamic, so the user can also name their team (i.e., "Justice League").
+
+I would prefer to have the standard employee questions loop through, with only one role-specific question per role, but I ran out of time to complete that. I'd like to create some sort of "tree", with managers posting to the top row, engineers in the middle, interns on the bottom row, but I couldn't quite get it there.
+
+Styling-wise, this was fun. Would like to create more responsiveness in the design, add a place for profile photo, make the card background a solid color, and line up the card header so everything is in alignment. Challenges for another day! With regards to styling, it was a good exercise to figure out where the styles would need to be changed to affect the final output html file. 
 
 # Questions
 <img src="https://avatars2.githubusercontent.com/u/60320896?v=4" alt= "GitHubUser" width="60" height="60" />
