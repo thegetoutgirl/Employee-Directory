@@ -9,7 +9,7 @@ const render = require("./lib/htmlRenderer");
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
-const teamList = []
+const teamList = [];
 
 // async Await - instead of .then LOOK THIS UP
 // REFER TO NODE PORTFOLIO HOMEWORK
@@ -81,8 +81,8 @@ function addEmployee() {
                 break;
 
             case "I'm done adding employees.":
-                render(teamList)
-                    fs.writeFile('./output/team.html', `teamList`, (err) => {
+                template = render(teamList);
+                    fs.writeFile(outputPath, template, err => {
                     if (err) {
                       console.log(err)
                       return
