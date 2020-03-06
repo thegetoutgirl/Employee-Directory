@@ -42,7 +42,7 @@ inquirer.prompt([
 ])
     // after manager is created, add them to the employee directory
     .then(answers => {
-        console.log(answers);
+        console.log("Thank you");
         const manager = new Manager(answers.mgrName, answers.id, answers.email, answers.officeNumber);
         teamList.push(manager);
 
@@ -117,7 +117,7 @@ function addEngineer() {
             message: "Engineer's GitHub username:"
         }
     ]).then(answers => {
-        console.log(answers);
+        console.log("Engineer Added");
         const engineer = new Engineer(answers.engName, answers.engId, answers.engEmail, answers.github);
         teamList.push(engineer);
         addEmployee();
@@ -148,7 +148,7 @@ inquirer.prompt([
         message: "Intern's School:"
     }
 ]).then(answers => {
-    console.log(answers);
+    console.log("Intern added");
     const intern = new Intern(answers.intName, answers.intId, answers.intEmail, answers.school);
     teamList.push(intern);
     addEmployee();
