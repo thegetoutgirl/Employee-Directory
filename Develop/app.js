@@ -58,7 +58,6 @@ function addEmployee() {
             name: "addEmployee",
             message: "Which employee would you like to add?",
             choices: [
-                "Manager",
                 "Engineer",
                 "Intern",
                 "I'm done adding employees."
