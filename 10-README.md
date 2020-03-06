@@ -2,8 +2,6 @@
 # Project Title
 Employee Directory
 
-<img src = "https://img.shields.io/github/last-commit/thegetoutgirl/read-me-generator"> <img src ="https://img.shields.io/badge/current%20status-%F0%9F%92%A5-white">
-
 # Project Description
 A quick-reference guide for employers looking to have all their team's info on one page.
 
