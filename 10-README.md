@@ -2,6 +2,9 @@
 # Project Title
 Employee Directory
 
+![GitHub Logo](10-employee-demo.gif)
+Format: ![gif demo of "Employee Directory" app.]
+
 # Project Description
 A quick-reference guide for employers looking to have all their team's info on one page.
 
